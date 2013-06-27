@@ -29,7 +29,7 @@ class AirshpChat extends WP_Widget {
 		extract( $args );
 
 		//Our variables from the widget settings.
-		$title = 'Airshp Chat';
+		$title = '';
 		$username = $current_user->user_login;
 		$show_info = isset( $instance['show_info'] ) ? $instance['show_info'] : false;
 
@@ -42,8 +42,8 @@ class AirshpChat extends WP_Widget {
 		echo "
 		<script type='text/javascript' src='http://code.jquery.com/jquery-latest.min.js'></script>
 		<script type='text/javascript' src='http://webchattest.nodejitsu.com:80/socket.io/socket.io.js'></script>
-		<script type='text/javascript' src='../chat.js'></script>
-		<div id = 'content' style = 'margin: 0 0 20px 0; border: solid 1px #999; overflow-y: scroll;'>		
+		<script type='text/javascript' src='https://rawgithub.com/zearle90/Tests-and-Samples/master/NodeJS/Wordpress%20Chat%20Plugin/Server/client.js'></script>
+		<div id = 'content' style = 'height: 300px; margin: 0 0 20px 0; border: solid 1px #999; overflow-y: scroll;'>		
 		</div>
 		<div class = 'controls'>
 			Name: <input id = 'name' type = 'text'></input>
