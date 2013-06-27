@@ -1,0 +1,16 @@
+{
+    "name": "RealTimeWebChat",
+    "version": "0.0.0-12",
+    "description": "Real time web chat",
+    "dependencies": {
+        "socket.io": "latest"
+    },
+    "author": "developer",
+    "subdomain": "WebChatTest",
+    "scripts": {
+        "start": "server.js"
+    },
+    "engines": {
+        "node": "0.8.x"
+    }
+}
