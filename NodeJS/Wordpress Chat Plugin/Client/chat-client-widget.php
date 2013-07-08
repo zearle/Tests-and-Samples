@@ -29,8 +29,8 @@ class AirshpChat extends WP_Widget {
 		extract( $args );
 
 		//Our variables from the widget settings.
-		$title = '';
-		$username = $current_user->user_login;
+		$room_id = $post->ID;
+		$user_name = $current_user->user_login;
 		$show_info = isset( $instance['show_info'] ) ? $instance['show_info'] : false;
 
 		echo $before_widget;
@@ -50,6 +50,7 @@ class AirshpChat extends WP_Widget {
 			<br />
 			<input id = 'field' type = 'text'></input>
 			<input id = 'send' type = 'button' value = 'send'></input>
+			<input id = 'room_id' type = hidden value = $room_id></input>
 		</div>
     ";
 		

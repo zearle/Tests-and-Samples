@@ -6,6 +6,7 @@ window.onload = function() {
 	var sendButton = document.getElementById("send");
 	var content = document.getElementById("content");
 	var name = document.getElementById("name");
+	var room_id = document.getElementById("room_id");
 
 	socket.on('message', function (data) {
 		if(data.message) {
