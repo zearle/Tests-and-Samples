@@ -4,7 +4,7 @@ window.onload = function() {
 	var socket = io.connect('http://webchattest.nodejitsu.com:80');
 	var field = document.getElementById("field");
 	var sendButton = document.getElementById("send");
-	var content = document.getElementById("content");
+	var chatroom = document.getElementById("chatroom");
 	var name = document.getElementById("name");
 
 	socket.on('message', function (data) {
@@ -15,8 +15,8 @@ window.onload = function() {
 				html += '<b>' + (messages[i].username ? messages[i].username : 'Server') + ': </b>';
 				html += messages[i].message + '<br />';
 			}
-			content.innerHTML = html;
-			content.scrollTop = content.scrollHeight;
+			chatroom.innerHTML = html;
+			chatroom.scrollTop = chatroom.scrollHeight;
 		} else {
 			console.log("There is a problem:", data);
 		}

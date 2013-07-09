@@ -40,16 +40,18 @@ class AirshpChat extends WP_Widget {
 
 		//Display the name 
 		echo "
-		<script type='text/javascript' src='http://code.jquery.com/jquery-latest.min.js'></script>
-		<script type='text/javascript' src='http://webchattest.nodejitsu.com:80/socket.io/socket.io.js'></script>
-		<script type='text/javascript' src='https://rawgithub.com/zearle90/Tests-and-Samples/master/NodeJS/Wordpress%20Chat%20Plugin/Server/client.js'></script>
-		<div id = 'content' style = 'height: 300px; margin: 0 0 20px 0; border: solid 1px #999; overflow-y: scroll;'>		
-		</div>
-		<div class = 'controls'>
-			Name: <input id = 'name' type = 'text'></input>
-			<br />
-			<input id = 'field' type = 'text'></input>
-			<input id = 'send' type = 'button' value = 'send'></input>
+		<div id = 'airshp-chat'>
+			<script type='text/javascript' src='http://code.jquery.com/jquery-latest.min.js'></script>
+			<script type='text/javascript' src='http://webchattest.nodejitsu.com:80/socket.io/socket.io.js'></script>
+			<script type='text/javascript' src='https://rawgithub.com/zearle90/Tests-and-Samples/master/NodeJS/Wordpress%20Chat%20Plugin/Server/client.js'></script>
+			<div id = 'chatroom' style = 'height: 300px; width: 300px; margin: 0 0 20px 0; border: solid 1px #999; overflow-y: scroll;'>		
+			</div>
+			<div class = 'controls'>
+				Name: <input id = 'name' type = 'text'></input>
+				<br />
+				<input id = 'field' type = 'text'></input>
+				<input id = 'send' type = 'button' value = 'send'></input>
+			</div>
 		</div>
     ";
 		
