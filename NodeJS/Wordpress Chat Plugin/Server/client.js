@@ -6,6 +6,7 @@ window.onload = function() {
 	var sendButton = document.getElementById("send");
 	var chatroom = document.getElementById("chatroom");
 	var name = document.getElementById("name");
+	var roomID = document.getElementById("roomID");
 
 	socket.on('message', function (data) {
 		if(data.message) {
@@ -14,6 +15,7 @@ window.onload = function() {
 			for(var i=0; i<messages.length; i++) {
 				html += '<b>' + (messages[i].username ? messages[i].username : 'Server') + ': </b>';
 				html += messages[i].message + '<br />';
+				html += messages[i].room + '<br />';
 			}
 			chatroom.innerHTML = html;
 			chatroom.scrollTop = chatroom.scrollHeight;
@@ -26,8 +28,7 @@ window.onload = function() {
 		if(name.value == "") {
 			alert("Please type your name!");
 		} else {
-			var text = field.value;
-			socket.emit('send', { message: text, username: name.value });
+			socket.emit('send', { message: field.value, username: name.value, room: roomID.value });
 			field.value = "";
 		}
 	};

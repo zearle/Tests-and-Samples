@@ -32,6 +32,7 @@ class AirshpChat extends WP_Widget {
 		$title = '';
 		$username = $current_user->user_login;
 		$show_info = isset( $instance['show_info'] ) ? $instance['show_info'] : false;
+		$roomURL = $_SERVER["HTTP_HOST"] . $_SERVER["REQUEST_URI"];
 
 		echo $before_widget;
 
@@ -51,6 +52,7 @@ class AirshpChat extends WP_Widget {
 				<br />
 				<input id = 'field' type = 'text'></input>
 				<input id = 'send' type = 'button' value = 'send'></input>
+				<input id = 'roomID' type = 'hidden' value = $roomURL></input>
 			</div>
 		</div>
     ";
