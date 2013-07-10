@@ -8,10 +8,10 @@ window.onload = function() {
 	var name = document.getElementById("name");
 	var roomID = document.getElementById("roomID");
 	
-	socket.on('connect', function (data) {
-		console.log(roomID.value);
-		socket.emit('join room', roomID.value);
-	});
+	// socket.on('connect', function (data) {
+// 		console.log(roomID.value);
+// 		socket.emit('join room', roomID.value);
+// 	});
 
 	socket.on('message', function (data) {
 		if(data.message) {
