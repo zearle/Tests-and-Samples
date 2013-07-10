@@ -19,7 +19,6 @@ window.onload = function() {
 			for(var i=0; i<messages.length; i++) {
 				html += '<b>' + (messages[i].username ? messages[i].username : 'Server') + ': </b>';
 				html += messages[i].message + '<br />';
-				html += messages[i].room ? messages[i].room : '' + '<br />';
 			}
 			chatroom.innerHTML = html;
 			chatroom.scrollTop = chatroom.scrollHeight;
@@ -32,7 +31,7 @@ window.onload = function() {
 		if(name.value == "") {
 			alert("Please type your name!");
 		} else {
-			socket.emit('send', { message: field.value, username: name.value, room: roomID.value });
+			socket.emit('send', { message: field.value, username: name.value});
 			field.value = "";
 		}
 	};
