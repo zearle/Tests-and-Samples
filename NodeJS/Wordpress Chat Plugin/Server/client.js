@@ -9,8 +9,9 @@ window.onload = function() {
 	var roomID = document.getElementById("roomID");
 	
 	socket.on('connect', function (data) {
-	        socket.emit('join room', roomID );
-	    });
+		console.log(roomID);
+		socket.emit('join room', roomID );
+	});
 
 	socket.on('message', function (data) {
 		if(data.message) {
