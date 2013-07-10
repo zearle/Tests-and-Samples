@@ -7,6 +7,10 @@ window.onload = function() {
 	var chatroom = document.getElementById("chatroom");
 	var name = document.getElementById("name");
 	var roomID = document.getElementById("roomID");
+	
+	socket.on('connect', function (data) {
+	        socket.emit('join room', roomID );
+	    });
 
 	socket.on('message', function (data) {
 		if(data.message) {
@@ -15,7 +19,7 @@ window.onload = function() {
 			for(var i=0; i<messages.length; i++) {
 				html += '<b>' + (messages[i].username ? messages[i].username : 'Server') + ': </b>';
 				html += messages[i].message + '<br />';
-				html += messages[i].room + '<br />';
+				html += messages[i].room ? messages[i].room : '' + '<br />';
 			}
 			chatroom.innerHTML = html;
 			chatroom.scrollTop = chatroom.scrollHeight;
