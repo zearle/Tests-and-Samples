@@ -8,10 +8,14 @@ window.onload = function() {
 	var name = document.getElementById("name");
 	var roomID = document.getElementById("roomID");
 	
+<<<<<<< HEAD
 	socket.on('connect', function (data) {
 		console.log('Test ' + roomID.value);
 		socket.emit('join room', roomID.value);
 	});
+=======
+
+>>>>>>> 854595dfcd6b6e1433a701a2728302ec66f9abd7
 
 	socket.on('message', function (data) {
 		if(data.message) {

@@ -1,6 +1,10 @@
 {
     "name": "RealTimeWebChat",
+<<<<<<< HEAD
     "version": "0.0.0-57",
+=======
+    "version": "0.0.0-55",
+>>>>>>> 854595dfcd6b6e1433a701a2728302ec66f9abd7
     "description": "Real time web chat",
     "dependencies": {
         "socket.io": "latest"
