@@ -9,7 +9,6 @@ window.onload = function() {
 	var roomID = document.getElementById("roomID");
 	
 	socket.on('connect', function (data) {
-		console.log('Test ' + roomID.value);
 		socket.emit('join room', roomID.value);
 	});	
 
