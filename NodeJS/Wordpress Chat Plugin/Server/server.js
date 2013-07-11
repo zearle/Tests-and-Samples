@@ -1,7 +1,7 @@
 var port = 80;
-var io = require('socket.io').listen(port);
-io.set("origins","*");
-
+var io = require('socket.io').listen();
+// io.server.removeListener('request', io.server.listeners('request')[1]);
+io.set('origins','*');
 
 io.sockets.on('connection', function (socket) {ire
 	// socket.on('join room', function (room) {
