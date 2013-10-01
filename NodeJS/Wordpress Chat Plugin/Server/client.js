@@ -1,7 +1,7 @@
 window.onload = function() {
 
 	var messages = [];
-	var socket = io.connect('http://8.24.203.80:8080');
+	var socket = io.connect('http://localhost:8080');
 	var field = document.getElementById("field");
 	var sendButton = document.getElementById("send");
 	var chatroom = document.getElementById("chatroom");

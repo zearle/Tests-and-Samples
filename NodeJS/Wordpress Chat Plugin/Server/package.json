@@ -3,7 +3,9 @@
     "version": "0.0.0-66",
     "description": "Real time web chat",
     "dependencies": {
-        "socket.io": "latest"
+        "socket.io": "latest",
+		"forever": "latest",
+		"mongojs": "latest"
     },
     "author": "developer",
     "subdomain": "WebChatTest",

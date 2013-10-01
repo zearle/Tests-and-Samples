@@ -43,7 +43,7 @@ class AirshpChat extends WP_Widget {
 		echo "
 		<div id = 'airshp-chat'>
 			<script type='text/javascript' src='http://code.jquery.com/jquery-latest.min.js'></script>
-			<script type='text/javascript' src='http://8.24.203.80:8080/socket.io/socket.io.js'></script>
+			<script type='text/javascript' src='http://localhost:8080/socket.io/socket.io.js'></script>
 			<script type='text/javascript' src='https://rawgithub.com/zearle90/Tests-and-Samples/master/NodeJS/Wordpress%20Chat%20Plugin/Server/client.js'></script>
 			<div id = 'chatroom' style = 'height: 300px; width: 300px; margin: 0 0 20px 0; border: solid 1px #999; overflow-y: scroll;'>		
 			</div>
