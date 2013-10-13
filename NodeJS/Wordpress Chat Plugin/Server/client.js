@@ -31,6 +31,8 @@ window.onload = function() {
 				html += '<b>' + (messages[i].username ? messages[i].username : 'Server') + ': </b>';
 				html += messages[i].message + '<br />';
 			}
+			chatroom.innerHTML = html;
+			chatroom.scrollTop = chatroom.scrollHeight;
 		} else {
 			console.log("There is a problem:", data);
 		}
