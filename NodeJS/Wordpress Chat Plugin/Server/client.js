@@ -22,7 +22,7 @@ window.onload = function() {
 			}
 			chatroom.innerHTML = html;
 			chatroom.scrollTop = chatroom.scrollHeight;
-		} else if(data[0].message){
+		} else if(data[0].chat_room){
 			for (var i = data.length - 1; i >= 0; i--) {
 			    messages.push(data[i]);
 				var html = '';
