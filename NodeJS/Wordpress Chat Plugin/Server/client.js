@@ -22,6 +22,15 @@ window.onload = function() {
 			}
 			chatroom.innerHTML = html;
 			chatroom.scrollTop = chatroom.scrollHeight;
+		} else if(data[0].message){
+			for (var i = data.length - 1; i >= 0; i--) {
+			    messages.push(data[i]);
+				var html = '';
+			}
+			for(var i=0; i<messages.length; i++) {
+				html += '<b>' + (messages[i].username ? messages[i].username : 'Server') + ': </b>';
+				html += messages[i].message + '<br />';
+			}
 		} else {
 			console.log("There is a problem:", data);
 		}

@@ -1,16 +1,15 @@
 var port = 8080;
 var io = require('socket.io').listen(port);
-var connection_string = "mongodb://airshp:tourgigs1@ds047468.mongolab.com:47468/zearle90"
+var connection_string = "mongodb://zearle90:monsters1@ds047468.mongolab.com:47468/zearle90"
 var mongojs = require('mongojs');
 var db = mongojs(connection_string, ['tourgigs']);
 var chatlogs = db.collection('tourgigs');
-io.set('log level', 1);
 
 io.sockets.on('connection', function (socket) {
 	socket.on('join room', function (room) {
 	    socket.join(room);
 		socket.set('roomID', room, function(roomID){});
-		chatlogs.find({chat_room: room}).forEach(function(err, message) {
+		chatlogs.find({chat_room: room}).sort({$natural: -1}).limit(20, function(err, message) {
 			socket.emit('message', message);
 		});
 	});
